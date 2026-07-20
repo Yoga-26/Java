@@ -1,0 +1,11 @@
+package java_program;
+
+public class reverse {
+
+	public static void main(String[] args) {
+		 for (char ch = 'Z'; ch>='A'; ch--) {
+			 System.out.println(ch + "");
+		 }
+	}
+
+}
