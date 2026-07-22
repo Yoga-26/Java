@@ -1,0 +1,70 @@
+package java_program;
+import java .util.Scanner;
+public class RollNumberMarks {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System . in);
+		System.out.println("Enter the students:");
+		int n =sc.nextInt(); 
+		
+		int roll[]= new int [n];
+		String name[] = new String [n];
+		int mark1[] =new int[n];
+		int mark2[] =new int[n];
+		int mark3[] =new int[n];
+		
+		 for (int i =0; i<n; i++) {
+			 System.out.println(" Enter student" + (i +1) + " Details ");
+			 System.out.println("Roll No:");
+			 roll[i] =sc.nextInt();
+			 
+			 System.out.println("Name :");
+			 name[i] =sc.next();
+			 
+			 System.out.println("Mark 1 :");
+			 mark1[i] =sc.nextInt();
+			 
+			 System.out.println("Mark 2:");
+			 mark2[i] = sc.nextInt();
+			 
+			 System.out.println("Mark 3 :");
+			 mark3[i] =sc.nextInt();
+			 
+			 }
+		 System.out.println("\nStudent Details:");
+		 
+		 for (int i =0; i<n; i++) {
+			 int total =mark1[i] + mark2[i] + mark1[i];
+			 int average =total /3;
+			 
+			 System.out.println(" Roll No:" + roll[i]);
+			 
+			 System.out.println("Name :" + name[i]);
+			 System.out.println("Total:" + total);
+			 System.out.println(" Average :" + average);
+			    
+			 
+			 if (average >=85) {
+				 System.out.println("Remark :EXCELLENT");
+			 }
+			 else if (average >= 75) {
+			 System.out.println("Remark :DISTINCTION");
+			 }
+			 else if (average >= 60) {
+		     System.out.println("Remark: FIRST CLASS");
+			 }
+			 else if (average >= 40) {
+		     System.out.println("Remark : PASS");
+			 }
+			 else {
+				 System.out.println("Remark : POOR");
+			 }  
+			 System.out.println();
+			 
+		
+
+	}
+		 sc.close();
+
+}
+}
