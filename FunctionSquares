@@ -1,0 +1,29 @@
+package java_program;
+
+public class FunctionSquares {
+	 void series1() {
+		 for ( int i =1; i<=7; i++) {
+			 System.out.print((i*i)+"");
+		 }
+	 }
+	 
+	 void series2() {
+		 for ( int i =1; i<=5; i++) {
+			 System.out.print(i*i*i + "");
+		 }
+	 }
+
+	public static void main(String[] args) {
+		FunctionSquares obj = new FunctionSquares();
+		System.out.println("series1:");
+		obj .series1();
+		System.out.println();
+		
+		System.out.println("series2:");
+		obj .series2();
+		
+		
+
+	}
+
+}
