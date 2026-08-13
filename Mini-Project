@@ -1,0 +1,200 @@
+package java_program;
+import java.util.Scanner;
+
+public class OnlineFoodOrderingSystem
+{
+    Scanner s = new Scanner(System.in);
+    static int total = 0;
+
+    
+    public void menu()
+    {
+        System.out.println("\n===== ONLINE FOOD ORDERING SYSTEM =====");
+        System.out.println("1. Pizza");
+        System.out.println("2. Burger");
+        System.out.println("3. Biryani");
+        System.out.println("4. Drinks");
+        System.out.println("5. Total Bill");
+
+        System.out.print("Enter Your Choice: ");
+        int choice = s.nextInt();
+
+        switch(choice)
+        {
+            case 1:
+                pizza();
+                break;
+
+            case 2:
+                burger();
+                break;
+
+            case 3:
+                biryani();
+                break;
+
+            case 4:
+                drinks();
+                break;
+
+            case 5:
+                totalBill();
+                break;
+
+            default:
+                System.out.println("Invalid Choice");
+                menu();
+        }
+    }
+
+    
+    public void pizza()
+    {
+        System.out.println("\n----- PIZZA MENU -----");
+        System.out.println("1. Cheese Pizza - ₹150");
+        System.out.println("2. Paneer Tikka Pizza - ₹220");
+        System.out.println("3. Corn Pizza - ₹200");
+        System.out.println("4. Mixed Veg Pizza - ₹220");
+        System.out.println("5. Mushroom Pizza - ₹250");
+
+        System.out.print("Select Pizza: ");
+        int ch = s.nextInt();
+
+        if(ch == 1)
+            quantity(150);
+        else if(ch == 2)
+            quantity(220);
+        else if(ch == 3)
+            quantity(200);
+        else if(ch == 4)
+            quantity(220);
+        else if(ch == 5)
+            quantity(250);
+        else
+            System.out.println("Invalid Choice");
+    }
+
+    // Burger
+    public void burger()
+    {
+        System.out.println("\n----- BURGER MENU -----");
+        System.out.println("1. Veg Burger - ₹80");
+        System.out.println("2. Cheese Burger - ₹100");
+        System.out.println("3. Paneer Burger - ₹120");
+        System.out.println("4. Crispy Burger - ₹130");
+        System.out.println("5. Double Burger - ₹150");
+
+        System.out.print("Select Burger: ");
+        int ch = s.nextInt();
+
+        if(ch == 1)
+            quantity(80);
+        else if(ch == 2)
+            quantity(100);
+        else if(ch == 3)
+            quantity(120);
+        else if(ch == 4)
+            quantity(130);
+        else if(ch == 5)
+            quantity(150);
+        else
+            System.out.println("Invalid Choice");
+    }
+
+   
+    public void biryani()
+    {
+        System.out.println("\n----- BIRYANI MENU -----");
+        System.out.println("1. Veg Biryani - ₹150");
+        System.out.println("2. Chicken Biryani - ₹220");
+        System.out.println("3. Mutton Biryani - ₹280");
+        System.out.println("4. Egg Biryani - ₹180");
+        System.out.println("5. Paneer Biryani - ₹200");
+
+        System.out.print("Select Biryani: ");
+        int ch = s.nextInt();
+
+        if(ch == 1)
+            quantity(150);
+        else if(ch == 2)
+            quantity(220);
+        else if(ch == 3)
+            quantity(280);
+        else if(ch == 4)
+            quantity(180);
+        else if(ch == 5)
+            quantity(200);
+        else
+            System.out.println("Invalid Choice");
+    }
+
+    
+    public void drinks()
+    {
+        System.out.println("\n----- DRINKS MENU -----");
+        System.out.println("1. Coca Cola - ₹40");
+        System.out.println("2. Pepsi - ₹40");
+        System.out.println("3. Sprite - ₹40");
+        System.out.println("4. Orange Juice - ₹60");
+        System.out.println("5. Water Bottle - ₹20");
+
+        System.out.print("Select Drink: ");
+        int ch = s.nextInt();
+
+        if(ch == 1)
+            quantity(40);
+        else if(ch == 2)
+            quantity(40);
+        else if(ch == 3)
+            quantity(40);
+        else if(ch == 4)
+            quantity(60);
+        else if(ch == 5)
+            quantity(20);
+        else
+            System.out.println("Invalid Choice");
+    }
+
+   
+    public void quantity(int price)
+    {
+        System.out.print("Enter Quantity: ");
+        int qty = s.nextInt();
+
+        int amount = price * qty;
+        total += amount;
+
+        System.out.println("Amount = ₹" + amount);
+
+        System.out.println("\n1. Continue Shopping");
+        System.out.println("2. Total Bill");
+
+        System.out.print("Enter Your Choice: ");
+        int option = s.nextInt();
+
+        if(option == 1)
+        {
+            menu();
+        }
+        else
+        {
+            totalBill();
+        }
+    }
+
+    
+    public void totalBill()
+    {
+        System.out.println("\n========== FINAL BILL ==========");
+        System.out.println("Total Amount = ₹" + total);
+        System.out.println("*******************************");
+        System.out.println("Thank You! Visit Again");
+    }
+
+   
+    public static void main(String[] args)
+    {
+        OnlineFoodOrderingSystem obj = new OnlineFoodOrderingSystem();
+        obj.menu();
+    }
+}
