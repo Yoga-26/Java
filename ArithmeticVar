@@ -1,0 +1,14 @@
+package java_test;
+
+public class ArithmeticVar {
+
+	public static void main(String[] args) {
+		int a=109;
+		int b=389;
+		System.out.println("Arithmetic =" + ( a +b));
+		System.out.println("SUbtraction =" + ( a -b));
+		System.out.println("Multiplication =" + ( a *b));
+		System.out.println("Division =" +( a /b));
+		
+
+	}
